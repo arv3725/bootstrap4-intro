@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -30,11 +32,13 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                
                 <span class="navbar-text" id="login">
                     <a class="btn">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
+                
             </div>
         </div>
     </nav>
@@ -285,16 +289,16 @@
             </div>
         </div>
     </div>
-
+    
     <div class="row row-content self-align-center">
-        <div class="col-12 offset-2 col-sm-8 align-content-center">
+        <div class="col-12 col-sm-8 offset-sm-2 align-content-center">
             <div class="card" id="reserveTable">
                 <h3 class="card-header bg-warning text-white">Reserve Table</h3>
                 <div class="card-body">
                     <div class="row">
                         <label class="col-md-2">Number of Guests</label>
                         <div class="col-md-10">
-                            <!-- Default inline 1-->
+                            <!-- Default inline 1 -->
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
                                 <label class="custom-control-label" for="defaultInline1">1</label>
@@ -347,7 +351,7 @@
             </div>
         </div>
     </div>
-
+    
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -390,6 +394,7 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -400,36 +405,8 @@
         });
     </script>
     -->
-    <script>
-        $(document).ready(function() {
-            $('#mycarousel').carousel({ interval : 500 })
-            $('#carouselButton').click(function() {
-                if ($('#carouselButton').children("span").hasClass('fa-pause')) {
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-                }
-                else if ($('#carouselButton').children('span').hasClass('fa-play')) {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');
-                }
-                
-            });
-            $('#login').click(function() {
-                $('#loginModal').modal('show');
-            });
-            $('.close').click(function() {
-                $('#loginModal').modal('hide');
-            });
-            $('#reserve-table').click(function() {
-                $('#table').modal('show');
-            });
-            $('.close').click(function() {
-                $('#table').modal('hide');
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
 </body>
 
